@@ -1,0 +1,56 @@
+device: cuda
+
+negative_inpainting_prompt: "text, writings, signs, text, white border, photograph border, artifacts, blur, smooth texture, foggy, fog, bad quality, distortions, unrealistic, distorted image, watermark, signature, fisheye look, windows, people, crowd, outdoor, landscape, view, chandelier"
+
+# motion parameters
+motion: rotations # predefined, rotations, round
+extrinsics: null
+intrinsics: null
+camera_speed_factor: 0.035 #0.03 for indoors, 0.05 for outdoors
+no_rotations_steps: 0
+rotation_steps: 10
+rotation_range: 0.03 #0.01
+rotate_radius: median # median, center, 0.1 (number)
+full_circle_epochs: 100
+change_translation_every: 20
+
+#rendering parameters
+use_splatting: False
+blur_radius: 1e-7 # 1e-13 for without aa, 1e-6 for with aa #0.0000000000001
+mesh_exclude_boundaries: True
+min_triangle_angle: -1 #2
+normal_filtering_threshold: -0.05 #-0.05 #-0.05, null for no filtering
+min_connected_component_size: 0 #1000 number of triangles
+connect_mesh: True
+fix_floating_artifacts: True
+antialiasing_factor: 2 # 1 for no aa, 2 for aa
+big_resolution: 1024
+
+#camera parameters
+init_focal_length: 500
+
+#decoder finetuning parameters
+finetune_decoder: True
+decoder_learning_rate: 0.0001
+num_finetune_decoder_steps: 100
+preservation_weight: 100
+
+#inpainting parameters
+stable_diffusion_checkpoint: "stabilityai/stable-diffusion-2-inpainting" #"dreambooth_models/mountains-sks-1500"
+num_inpainting_steps: 50
+classifier_free_guidance_scale: 7.5
+inpainting_resolution: 600
+
+#depth finetuning parameters
+finetune_depth_model: True
+depth_model_learning_rate: 1e-7
+num_finetune_depth_model_steps: 300
+
+save_fps: 10
+use_xformers: False
+starting_image: null
+enable_mix_precision: True
+sobel_beta: 12
+sobel_threshold: 0.3
+mask_opening_kernel_size: 3 #5
+min_disparity: 1e-2

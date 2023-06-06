@@ -1,0 +1,12 @@
+kornia
+matplotlib
+opencv-python
+scikit-image
+trimesh
+diffusers
+transformers
+accelerate
+timm
+einops
+omegaconf
+av
