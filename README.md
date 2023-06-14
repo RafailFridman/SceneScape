@@ -75,7 +75,7 @@ For more results see the [supplementary material](https://scenescape.github.io/s
 @article{SceneScape,
       author    = {Rafail Fridman and Amit Abecasis and Yoni Kasten and Tali Dekel},
       title     = {SceneScape: Text-Driven Consistent Scene Generation},
-      journal   = journal={arXiv preprint arXiv:2302.01133},
+      journal   = {arXiv preprint arXiv:2302.01133},
       year      = {2023},
   }
 ```
