@@ -7,6 +7,13 @@
 ![teaser](assets/teaser.png)
 
 
+
+
+https://github.com/RafailFridman/SceneScape/assets/22198039/de89e930-4aba-4149-935a-d293fba793d4
+
+
+
+
 **SceneScape** is a method for  generating videos of indoor scenes walkthroughs from text, as described <a href="https://arxiv.org/abs/2302.01133" target="_blank">here</a>.
 ### Abstract
 >We present a method for text-driven perpetual view generation -- synthesizing long-term videos of various scenes solely, given an input text prompt describing the scene and camera poses. We introduce a novel framework that generates such videos in an online fashion by combining the generative power of a pre-trained text-to-image model with the geometric priors learned by a pre-trained monocular depth prediction model. To tackle the pivotal challenge of achieving 3D consistency, i.e., synthesizing videos that depict geometrically-plausible scenes, we deploy an online test-time training to encourage the predicted depth map of the current frame to be geometrically consistent with the synthesized scene. The depth maps are used to construct a unified mesh representation of the scene, which is progressively constructed along the video generation process. In contrast to previous works, which are applicable only to limited domains, our method generates diverse scenes, such as walkthroughs in spaceships, caves, or ice castles.
@@ -60,6 +67,7 @@ Intermediate results will be saved to `output` during optimization. Once the met
 You can change the prompt in the `config/example_configs/dungeon.yaml` file to generate different videos, or create your own config. The base parameters of our method are located in `configs/base-config.yaml`.
 
 For more results see the [supplementary material](https://scenescape.github.io/sm/index.html).
+
 
 
 ## Citation
